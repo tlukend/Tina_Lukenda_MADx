@@ -58,9 +58,7 @@ class MainActivity : ComponentActivity() {
 @Preview
 @Composable
 fun MyList(movies: List<Movie> = getMovies()){
-
     LazyColumn{
-
         items(movies) {movie ->
             MovieRow(movie = movie.title)
         }
