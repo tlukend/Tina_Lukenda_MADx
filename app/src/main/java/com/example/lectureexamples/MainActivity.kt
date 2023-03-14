@@ -62,14 +62,14 @@ fun MyList(movies: List<Movie> = getMovies()){
     LazyColumn{
 
         items(movies) {movie ->
-            MovieRow(movie = movie.title)
+            MovieRow(movie = movie)
         }
     }
 }
 
 
 @Composable
-fun MovieRow(movie: String) {
+fun MovieRow(movie: Movie) {
     Card(modifier = Modifier
         .fillMaxWidth()
         .padding(5.dp),
@@ -104,7 +104,7 @@ fun MovieRow(movie: String) {
                 .padding(5.dp),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                Text(movie, style = MaterialTheme.typography.h6)
+                Text(movie.title, style = MaterialTheme.typography.h6)
                 Icon(
                     imageVector = Icons.Default.KeyboardArrowUp,
                     contentDescription = "Show details")
