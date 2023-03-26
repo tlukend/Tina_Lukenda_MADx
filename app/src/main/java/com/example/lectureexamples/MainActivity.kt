@@ -38,4 +38,13 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Preview
+@Composable
+fun DefaulPreview(){
+    LectureExamplesTheme{
+        Navigation()
+    }
+    
+}
+
 

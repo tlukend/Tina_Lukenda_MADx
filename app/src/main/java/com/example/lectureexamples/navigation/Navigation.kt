@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.lectureexamples.screens.DetailScreen
+import com.example.lectureexamples.screens.FavouritesScreen
 import com.example.lectureexamples.screens.HomeScreen
 
 @Composable
@@ -16,6 +17,10 @@ fun Navigation(){
     NavHost(navController = navController, startDestination = "home") {
         composable(route = "home") {
             HomeScreen(navController)
+        }
+
+        composable(route = "favourites"){
+            FavouritesScreen(navController)
         }
 
         composable(
