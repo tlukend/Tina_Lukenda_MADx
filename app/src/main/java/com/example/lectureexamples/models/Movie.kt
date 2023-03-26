@@ -140,3 +140,12 @@ fun getMovies(): List<Movie> {
 
         )
 }
+
+
+
+fun getMovieTitles(): List<String> {
+    return listOf(
+        "Movie1\n", "Movie2\n", "Movie3\n", "Movie4\n","Movie5\n","Movie6\n","Movie7\n","Movie8\n"
+
+    )
+}

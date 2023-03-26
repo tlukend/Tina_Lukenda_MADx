@@ -86,9 +86,7 @@ fun MyList(navController: NavController = rememberNavController(),
             MovieRow(
                 movie = movie,
             )  { movieId ->
-                Log.d("MyList", "item clicked $movieId")
-                // navigate to detailscreen
-                //navController.navigate("detail/$movieId")
+                navController.navigate("detail/${movieId}")
             }
         }
     }
@@ -162,7 +160,6 @@ fun MovieRow(movie: Movie, onItemClick: (String) -> Unit = {}) {
                         tint = Color.Black,
                     )
                 }
-
             }
             AnimatedVisibility(visible = visible) {
                 MovieDetails(movie)
